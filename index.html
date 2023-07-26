@@ -7,7 +7,7 @@
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>GRAM-HD</title>
+    <title>GRAM-HD: 3D-Consistent Image Generation at High Resolution with Generative Radiance Manifolds</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@
                         <a href="https://YuDeng.github.io/" style="font-size: 16px;">
                             Yu Deng
                         </a>
-                        <sup>3,2</sup>
+                        <sup>1,2</sup>
                     </li>
                     <li>
                         <a href="http://www.xtong.info/" style="font-size: 16px;">
@@ -65,7 +65,7 @@
 					<li>
                         <sup>1</sup>
                         <a href="http://en.ustc.edu.cn/" style="font-size: 16px;">
-                            University of Science and Technology of China
+                            Tsinghua Unviersity
                         </a>
                     </li>
 					<li>
@@ -75,60 +75,38 @@
                             Microsoft Research Asia
                         </a>
                     </li>
-                    <li>
-                        <sup>3</sup>
-                        <a href="https://www.tsinghua.edu.cn/en/" style="font-size: 16px;">
-                            Tsinghua Unviersity
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
 		
 		<br />
 		<div class="row">
-		<div class="col-md-12 text-center">
-			<a href="https://arxiv.org/abs/2206.07255" target="blank"><span style="text-decoration:underline;font-size:20px">arXiv:2206.07255</span></a>
-		</div>
-		</div>
-
-<!--
-        <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center">
                 <ul class="nav nav-pills nav-justified">
                     <li>
-                        <a href="https://YuDeng.github.io/GRAM/files/compressed_new.pdf">
+                        <a href="https://arxiv.org/abs/2206.07255">
                             <img src="./files/paper.png" height="60px">
                             <h4><strong>Paper</strong></h4>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://arxiv.org/abs/2112.08867">
-                            <img src="./files/arxiv.png" height="60px">
-                            <h4><strong>ArXiv</strong></h4>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a onClick="alert('Code coming soon!\nContact t-yudeng@microsoft.com for more details.')">
+                        <a>
                             <img src="./files/github.png" height="60px">
                             <h4><strong>Code</strong></h4>
                         </a>
                     </li>
                 </ul>
             </div>
-        </div>
--->
+		</div>
+
         <div class="row">
             <div class="col-md-12 col-md-offset-0 text-center">
-			<!--
                 <a>
                     <video style="width:100%;height:100%;" playsinline autoplay loop preload muted>
                         <source src="./files/teaser.mp4" type="video/mp4">
                     </video>
                 </a>
-			-->
                 <br></br>
 			
                 <h2>
@@ -154,6 +132,53 @@
                             style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Overview
+                </h2>
+                <hr style="margin-top:0px">
+                <img src="./files/framework.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify" style="font-size: 16px;">
+                    The overall framework of our GRAM-HD method. The generator consists of two components:
+                    the radiance manifold generator and the manifold super-resolution module.
+                    The former generates radiance and feature manifolds that represent an LR 3D scene.
+                    Through manifold gridding, the manifolds are sampled to discrete 2D feature maps.
+                    The super-resolution module then processes these feature maps and output HR radiance maps.
+                    Finally, an HR image can rendered by computing ray-manifold intersections and
+                    integrating their radiance sampled from the HR radiance maps.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Generation Results
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    GRAM-HD can generate high-quality images at high resolution with rich details.
+                    Moreover, it allows explicit manipulation of camera pose while maintains strong 3D consistency across different views.
+                    For some thin structures like human hair, glasses, and whiskers of cats,
+                    our method produces realistic fine details and correct parallax effect viewed from different angles.
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="./files/results.mp4" type="video/mp4">
+                </video>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    GRAM have comparable quality to other method that adopts 2D CNN for image-space upsampling
+                    but with remarkable better 3D consistency, which is demonstrated by the following Epipolar Line Images.
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="./files/epi.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
         
