@@ -157,3 +157,17 @@ span.highlight {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
+
+.bibtex {
+  padding: 0px 24px;
+  color: black;
+  font-family: consolas, monospace;
+  white-space: pre;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
