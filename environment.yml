@@ -1,0 +1,21 @@
+name: gram-hd
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch==1.11.0
+  - torchvision==0.12.0
+  - cudatoolkit=11.3
+  - pip:
+    - imageio
+    - imageio-ffmpeg
+    - numpy
+    - scipy
+    - opencv-python
+    - pillow
+    - tensorboard==1.14.0
+    - torch-fidelity==0.2.0
+    - easydict
+    - torch-ema@git+https://github.com/fadel/pytorch_ema@3950a7b5c4b88f46fd14f620277bad21898597a9
+    - torch_fidelity
