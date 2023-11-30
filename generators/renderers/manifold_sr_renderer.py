@@ -253,6 +253,12 @@ class ManifoldSRRenderer:
             grid_pts_bg = torch.stack([bg_map(x).reshape(-1), bg_map(y).reshape(-1), -0.12*torch.ones(HL*HL)], dim=-1).expand(B, -1, -1).to(device)
             grid_pts_bg = grid_pts_bg.reshape(B, HL*HL, 3) # [B, HL*HL, 3]
             grid_ray_d_bg = normalize_vecs(grid_pts_bg - rays_o[0, 0]) # [B, HL*HL, 3]
+
+            if self.lock_view_dependence:
+                grid_ray_d = torch.zeros_like(grid_ray_d)
+                grid_ray_d[..., -1] = -1
+                grid_ray_d_bg = torch.zeros_like(grid_ray_d_bg)
+                grid_ray_d_bg[..., -1] = -1
         
         raw, feature = feature(grid_pts.reshape(B, -1, 3), grid_ray_d.reshape(B, -1, 3))
         raw = raw.reshape(B, HL*HL, self.num_manifolds-1, 4) # [B, HL*HL, num_manifolds-1, 4]

@@ -87,7 +87,7 @@ if __name__ == '__main__':
         face_angles = [[a + v_mean, b + h_mean] for a, b in zip(face_pitchs, face_yaws)]
         fovs = [12] * frames
     elif opt.type == 'rand':
-        generator.renderer.lock_view_dependence = True
+        generator.renderer.lock_view_dependence = False
         frames = 1
         concat = (1, 1)
         face_angles = [[None, None]]

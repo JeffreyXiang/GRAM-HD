@@ -27,11 +27,11 @@ conda activate gram-hd
 Pretrained models are stored within this repository. You can find them in the `ckpts` folder. The detailed description of the pretrained models is as follows:
 | File | Description | Config |
 | :-: | :-: | :-: |
-| [ffhq256](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/ffhq256.ckpt) | 256x256 model trained on FFHQ dataset | GRAMHD256_FFHQ
-| [ffhq512](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/ffhq512.ckpt) | 512x512 model trained on FFHQ dataset | GRAMHD512_FFHQ
-| [ffhq1024](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/ffhq1024.ckpt) | 1024x1024 model trained on FFHQ dataset | GRAMHD1024_FFHQ
-| [afhqcats256](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/afhqcats256.ckpt) | 256x256 model trained on AFHQ-Cats dataset | GRAMHD256_AFHQ
-| [afhqcats512](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/afhqcats512.ckpt) | 512x512 model trained on AFHQ-Cats dataset | GRAMHD512_AFHQ
+| [ffhq256](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/ffhq256.pt) | 256x256 model trained on FFHQ dataset | GRAMHD256_FFHQ
+| [ffhq512](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/ffhq512.pt) | 512x512 model trained on FFHQ dataset | GRAMHD512_FFHQ
+| [ffhq1024](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/ffhq1024.pt) | 1024x1024 model trained on FFHQ dataset | GRAMHD1024_FFHQ
+| [afhqcats256](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/afhqcats256.pt) | 256x256 model trained on AFHQ-Cats dataset | GRAMHD256_AFHQ
+| [afhqcats512](https://github.com/JeffreyXiang/GRAM-HD/blob/main/ckpts/afhqcats512.pt) | 512x512 model trained on AFHQ-Cats dataset | GRAMHD512_AFHQ
 
 ## Inference
 To generate multiview images or videos with our pretrained models, run the following command:
